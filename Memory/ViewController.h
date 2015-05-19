@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+id<UITableViewDelegate>
+{
+    UITableViewCell *table
+}
 
-@interface ViewController : UIViewController
 
 
 @end
