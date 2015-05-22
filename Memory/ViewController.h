@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@interface ViewController:UIViewController
+<UITableViewDataSource,UITableViewDelegate>
 {
- NSObject 
+    IBOutlet UITableView *listTableView;
+    NSMutableArray *userInfoArray;
 }
 
--(IBAction)change;
--(IBAction)glaph;
--(IBAction)option;
+
 @end
 
