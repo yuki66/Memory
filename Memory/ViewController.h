@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-id<UITableViewDelegate>
 {
-    UITableViewCell *table
+ NSObject 
 }
 
-
-
+-(IBAction)change;
+-(IBAction)glaph;
+-(IBAction)option;
 @end
 
