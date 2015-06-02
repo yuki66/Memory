@@ -21,11 +21,6 @@
     if(!userInfoArray) {
         userInfoArray = [NSMutableArray new];
     }
-    [userInfoArray addObject:@"あいえお"];
-    [userInfoArray addObject:@"kakiku"];
-    [userInfoArray addObject:@"さささ"];
-    [userInfoArray addObject:@"そう"];
-    [userInfoArray addObject:@"かきく"];
 }
 
 - (void)didReceiveMemoryWarning {
