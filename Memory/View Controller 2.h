@@ -11,10 +11,7 @@
 #import <UIKit/UIKit.h>
 @interface #import <UIKit/UIKit.h>
 @interface View Controller 2:UIViewController
-<UI   Delegate>
-{
-    IBOutlet UITouch *touch;
-}
+
 
 
 @end
