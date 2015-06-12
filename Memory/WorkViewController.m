@@ -37,14 +37,11 @@
     // タッチした座標を取得します。
     CGPoint currentPoint = [[touches anyObject] locationInView:self.canvas];
     
-          return;
-    }
-    
-    // パスを初期化します。
-    bezierPath = [UIBezierPath bezierPath];
-    bezierPath.lineCapStyle = kCGLineCapRound;
-    bezierPath.lineWidth = 4.0;
-    [bezierPath moveToPoint:currentPoint];
+// パスを初期化します。
+bezierPath = [UIBezierPath bezierPath];
+bezierPath.lineCapStyle = kCGLineCapRound;
+bezierPath.lineWidth = 4.0;
+[bezierPath moveToPoint:currentPoint];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event

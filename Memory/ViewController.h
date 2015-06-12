@@ -12,8 +12,8 @@
 {
     IBOutlet UITableView *listTableView;
     NSMutableArray *userInfoArray;
-}
-
+    }
+-(IBAction)plus;
 
 @end
 
