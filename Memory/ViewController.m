@@ -13,15 +13,12 @@
 @implementation ViewController
 
 
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     listTableView.dataSource = self;
     listTableView.delegate = self;
     if(!userInfoArray) {
         userInfoArray = [NSMutableArray new];
-        
     }
 }
 
@@ -48,4 +45,32 @@
     cell.textLabel.text = [userInfoArray objectAtIndex:indexPath.row];
     
     return cell;
-}@end
+}
+
+-(IBAction)plus{
+    [self showAlert];
+}
+- (void)showAlert {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title" message:@"タイトルを入力してください" delegate:self cancelButtonTitle:@"キャンセル" otherButtonTitles:@"OK", nil];
+    [alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            
+            break;
+        case 1:
+            [userInfoArray addObject:[[alertView textFieldAtIndex:0] text]];
+            [listTableView reloadData];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+
+@end

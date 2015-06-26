@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 @interface ViewController:UIViewController
-<UITableViewDataSource,UITableViewDelegate>
+<UITableViewDataSource,UITableViewDelegate, UIAlertViewDelegate>
 {
     IBOutlet UITableView *listTableView;
     NSMutableArray *userInfoArray;
-    }
+}
+
 -(IBAction)plus;
 
 @end
