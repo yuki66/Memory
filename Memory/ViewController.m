@@ -20,6 +20,17 @@
     if(!userInfoArray) {
         userInfoArray = [NSMutableArray new];
     }
+   else if(userInfoArray == nil){
+        userInfoArray = [[NSMutableArray alloc]init];
+    }
+    NSUserDefaults *ud =[NSUserDefaults standardUserDefaults];
+    [ud setObject:userInfoArray forKey:@"mutable"];
+    [ud synchronize]; //即時保存
+    
+    //取り出し
+    userInfoArray = [[ud objectForKey:@"mutable"] mutableCopy];
+    
+    NSLog(@"userInfoArray == %@", userInfoArray);
 }
 
 - (void)didReceiveMemoryWarning {
